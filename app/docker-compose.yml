@@ -1,0 +1,25 @@
+services:
+  backend:
+    image: realtime-backend
+    pull_policy: never
+    container_name: realtime-backend
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - 8000:8000
+    volumes:
+      - ./db/db.sqlite3:/db.sqlite3
+      - ./static:/src/public
+
+  frontend:
+    image: realtime-frontend
+    pull_policy: never
+    container_name: realtime-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - 80:80

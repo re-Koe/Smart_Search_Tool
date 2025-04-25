@@ -1,0 +1,26 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: "#f8f8f8";
+}
+
+.app-container .main-content {
+  margin-left: 210px; /* Adjust this value according to your Navbar width */
+  padding: 10px;
+  height: calc(100vh - 20px); /* Adjust based on the top padding */
+  overflow-y: auto;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.app-container .main-content h1 {
+  color: #333;
+}
+
+.app-container .main-content {
+  color: #666;
+}

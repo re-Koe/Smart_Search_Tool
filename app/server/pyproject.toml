@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "301-backend"
+description = "Test backend for 301 smart search"
+readme = "README.md"
+requires-python = ">=3.11"
+version = "0.0.1"
+dependencies = [
+  "flask",
+  "flask-cors",
+  "flask-limiter",
+  "google-generativeai",
+  "python-dotenv",
+]
+[tool.setuptools.packages.find]
+where = ["src"]
